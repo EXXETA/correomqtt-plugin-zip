@@ -1,7 +1,7 @@
-package com.exxeta.correomqtt.plugin.manipulator;
+package org.correomqtt.plugin.manipulator;
 
-import com.exxeta.correomqtt.plugin.spi.DetailViewManipulatorHook;
-import com.exxeta.correomqtt.plugin.spi.ExtensionId;
+import org.correomqtt.plugin.spi.DetailViewManipulatorHook;
+import org.correomqtt.plugin.spi.ExtensionId;
 import org.pf4j.Extension;
 
 @Extension

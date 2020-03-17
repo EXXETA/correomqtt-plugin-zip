@@ -42,7 +42,7 @@ echo "==== SET PLUGIN VERSION ===="
 mvn versions:set -DnewVersion="$PLUGIN_VERSION"
 
 echo "==== BUILD PLUGIN ===="
-mvn versions:use-dep-version -DdepVersion="$PLUGIN_VERSION" -Dincludes=com.exxeta:correomqtt
+mvn versions:use-dep-version -DdepVersion="$PLUGIN_VERSION" -Dincludes=org:correomqtt
 mvn clean install
 
 cd "$TRAVIS_BUILD_DIR" || exit 1
