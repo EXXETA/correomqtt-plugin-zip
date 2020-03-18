@@ -24,12 +24,6 @@ tar zxvf zulu13.29.9-ca-jdk13.0.2-linux_x64.tar.gz >/dev/null 2>&1
 echo " done"
 export JAVA_HOME=$TRAVIS_BUILD_DIR/zulu13.29.9-ca-jdk13.0.2-linux_x64
 export PATH=$JAVA_HOME/bin:$PATH
-echo -n "Downloading Java 14 ..."
-wget -q https://download.java.net/java/GA/jdk14/076bab302c7b4508975440c56f6cc26a/36/GPL/openjdk-14_linux-x64_bin.tar.gz
-echo " done"
-echo -n "Extracting Java 14 ..."
-tar zxvf openjdk-14_linux-x64_bin.tar.gz >/dev/null 2>&1
-echo " done"
 
 echo "JAVA_HOME=$JAVA_HOME"
 echo "PATH=$PATH"
@@ -42,7 +36,6 @@ echo "==== SET PLUGIN VERSION ===="
 mvn versions:set -DnewVersion="$PLUGIN_VERSION"
 
 echo "==== BUILD PLUGIN ===="
-mvn versions:use-dep-version -DdepVersion="$PLUGIN_VERSION" -Dincludes=org:correomqtt
 mvn clean install
 
 cd "$TRAVIS_BUILD_DIR" || exit 1
