@@ -1,4 +1,4 @@
-package com.exxeta.correomqtt.plugin.manipulator;
+package org.correomqtt.plugin.manipulator;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
